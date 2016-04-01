@@ -37,3 +37,17 @@ CREATE TABLE users (
 	password VARCHAR (32) NOT NULL,
 	password_salt VARCHAR (32) NOT NULL
 );
+
+INSERT INTO "public"."users" ("user_id", "user_name", "password", "password_salt") VALUES ('uuuuuuuuuuuuuuuuuuuuuuuu', 'tao', '123456', '123456');
+
+CREATE TABLE user_roles (
+	rel_id VARCHAR (32) NOT NULL PRIMARY KEY,
+	username VARCHAR (50) NOT NULL,
+	role_name VARCHAR (50) NOT NULL
+);
+
+CREATE TABLE roles_permissions (
+	rel_id VARCHAR (32) NOT NULL PRIMARY KEY,
+	username VARCHAR (50) NOT NULL,
+	permission VARCHAR (50) NOT NULL
+);
