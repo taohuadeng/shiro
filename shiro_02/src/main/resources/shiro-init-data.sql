@@ -1,10 +1,10 @@
 delete from users;
 delete from user_roles;
 delete from roles_permissions;
-INSERT INTO "public"."users" ("user_id", "user_name", "password", "password_salt") VALUES ('uuuuuuuuuuuuuuuuuuuuuuuu', 'tao', '123456', '123456');
+INSERT INTO "public"."users" ("user_id", "username", "password", "password_salt") VALUES ('uuuuuuuuuuuuuuuuuuuuuuuu', 'tao', '123456', '123456');
 INSERT INTO "public"."user_roles" ("rel_id", "username", "role_name") VALUES ('1', 'tao', 'role1');
 INSERT INTO "public"."user_roles" ("rel_id", "username", "role_name") VALUES ('2', 'tao', 'role2');
-INSERT INSERT INTO "public"."roles_permissions" ("rel_id", "role_name", "permission") VALUES ('1', 'role1', '+user1+10');
+INSERT INTO "public"."roles_permissions" ("rel_id", "role_name", "permission") VALUES ('1', 'role1', '+user1+10');
 INSERT INTO "public"."roles_permissions" ("rel_id", "role_name", "permission") VALUES ('2', 'role1', 'user1:*');
 INSERT INTO "public"."roles_permissions" ("rel_id", "role_name", "permission") VALUES ('3', 'role2', '+user2+10');
 INSERT INTO "public"."roles_permissions" ("rel_id", "role_name", "permission") VALUES ('4', 'role2', 'user2:*');
