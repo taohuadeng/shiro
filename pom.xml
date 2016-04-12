@@ -11,6 +11,7 @@
     <modules>
         <module>shiro_01</module>
         <module>shiro_02</module>
+        <module>shiro_06</module>
     </modules>
 
 
