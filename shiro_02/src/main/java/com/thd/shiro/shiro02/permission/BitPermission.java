@@ -7,18 +7,18 @@ import org.apache.shiro.authz.Permission;
 /**
  * 规则
  * +资源字符串+权限位+实例ID
- * <p>
+ * <p/>
  * 以+开头 中间通过+分割
- * <p>
+ * <p/>
  * 权限：
  * 0 表示所有权限
  * 1 新增 0001
  * 2 修改 0010
  * 4 删除 0100
  * 8 查看 1000
- * <p>
+ * <p/>
  * 如 +user+10 表示对资源user拥有修改/查看权限
- * <p>
+ * <p/>
  * 不考虑一些异常情况
  */
 public class BitPermission implements Permission {
@@ -49,7 +49,6 @@ public class BitPermission implements Permission {
         if (StringUtils.isEmpty(instanceId)) {
             instanceId = "*";
         }
-
     }
 
     @Override
@@ -57,6 +56,7 @@ public class BitPermission implements Permission {
         if (!(p instanceof BitPermission)) {
             return false;
         }
+
         BitPermission other = (BitPermission) p;
 
         if (!("*".equals(this.resourceIdentify) || this.resourceIdentify.equals(other.resourceIdentify))) {
@@ -70,6 +70,7 @@ public class BitPermission implements Permission {
         if (!("*".equals(this.instanceId) || this.instanceId.equals(other.instanceId))) {
             return false;
         }
+
         return true;
     }
 
