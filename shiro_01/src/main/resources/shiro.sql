@@ -39,6 +39,7 @@ CREATE TABLE users (
 );
 
 INSERT INTO "public"."users" ("user_id", "username", "password", "password_salt") VALUES ('uuuuuuuuuuuuuuuuuuuuuuuu', 'tao', '123456', '123456');
+INSERT INTO "public"."users" ("user_id", "username", "password", "password_salt") VALUES ('zzzzzzzzzzzzzzzzzzzzzzzz', 'zhang', '123', '123');
 
 CREATE TABLE user_roles (
 	rel_id VARCHAR (32) NOT NULL PRIMARY KEY,
